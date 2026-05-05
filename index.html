@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>gael ky0 | Loot Link Experience</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top center, #1a1a1a 0%, #050505 100%);
+}
+
+.animate-slow-fade {
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.glass-card {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.4s;
+}
+
+.glass-card:hover {
+    border-color: rgba(16,185,129,0.5);
+    box-shadow: 0 0 20px rgba(16,185,129,0.1);
+}
+</style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-4 text-white">
+
+<main class="w-full max-w-md animate-slow-fade">
+
+<div class="text-center text-xs text-gray-500 mb-4">
+🔗 http://gael.com/key/
+</div>
+
+<div class="text-center mb-8">
+<h1 class="text-5xl font-extrabold tracking-tighter mb-2">
+gael <span class="text-emerald-500">ky0</span>
+</h1>
+<p class="text-gray-400 text-sm uppercase">Desbloquea tu recompensa</p>
+</div>
+
+<div class="glass-card rounded-3xl p-6 shadow-2xl">
+
+<div class="mb-6">
+<h2 class="text-xl font-semibold mb-1">Pasos del Quest</h2>
+<div class="h-1 w-12 bg-emerald-500 rounded-full"></div>
+</div>
+
+<div class="space-y-4">
+
+<!-- STEP 1 -->
+<div onclick="step1()" class="flex justify-between p-4 rounded-2xl bg-white/5 hover:bg-white/10 cursor-pointer">
+<div>
+<p class="text-sm font-medium">Suscribirse al canal</p>
+<p id="status1" class="text-xs text-gray-500">Obligatorio</p>
+</div>
+<span>➡</span>
+</div>
+
+<!-- STEP 2 -->
+<div onclick="step2()" class="flex justify-between p-4 rounded-2xl bg-white/5 hover:bg-white/10 cursor-pointer">
+<div>
+<p class="text-sm font-medium">Ver anuncio corto</p>
+<p id="status2" class="text-xs text-gray-500">45 segundos</p>
+</div>
+<span>➡</span>
+</div>
+
+</div>
+
+<button id="getBtn" onclick="goToLink()" disabled
+class="w-full mt-8 py-4 bg-emerald-600/20 border border-emerald-500/30 text-emerald-500 rounded-2xl font-bold opacity-50">
+GET LINK
+</button>
+
+</div>
+
+<footer class="mt-8 text-center">
+<p class="text-gray-600 text-xs uppercase">Secure Experience by gael ky0</p>
+</footer>
+
+</main>
+
+<script>
+let done1 = false;
+let done2 = false;
+
+// STEP 1
+function step1(){
+    window.open("https://youtube.com/@gael09salgado?si=NoEpCNNBiLsgipmb", "_blank");
+    document.getElementById("status1").innerText = "Esperando 90s...";
+
+    setTimeout(() => {
+        done1 = true;
+        document.getElementById("status1").innerText = "✔ Correcto";
+        checkUnlock();
+    }, 90000);
+}
+
+// STEP 2
+function step2(){
+    window.open("https://www.google.com", "_blank");
+    document.getElementById("status2").innerText = "Esperando 45s...";
+
+    setTimeout(() => {
+        done2 = true;
+        document.getElementById("status2").innerText = "✔ Correcto";
+        checkUnlock();
+    }, 45000);
+}
+
+// UNLOCK BUTTON
+function checkUnlock(){
+    if(done1 && done2){
+        let btn = document.getElementById("getBtn");
+        btn.disabled = false;
+        btn.classList.remove("opacity-50");
+    }
+}
+
+// REDIRECT FINAL
+function goToLink(){
+    window.location.href = "https://pastebin.com/raw/p2dbpQ5v";
+}
+</script>
+
+</body>
+</html>
